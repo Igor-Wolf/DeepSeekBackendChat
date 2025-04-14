@@ -20,10 +20,10 @@ export const sendQuestionService = async (bodyValue: any, res: Response) => {
     const logStream = new Transform({
       transform(chunk: any, encoding: string, callback: Function) {
         // Loga o "chunk" de dados enquanto está sendo recebido
-        var respostaJson = JSON.parse(chunk)
-        respostaJson = respostaJson.message.content || ""
-        resposta += respostaJson
-        console.log(resposta);
+        // var respostaJson = JSON.parse(chunk)
+        // respostaJson = respostaJson.message.content || ""
+        // resposta += respostaJson
+        // console.log(resposta);
         // Passa o dado para o próximo fluxo
         callback(null, chunk);
       }
